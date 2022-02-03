@@ -1,3 +1,5 @@
+#include <iostream>
+#include <vector>
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -55,7 +57,13 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num);
+int Sign(int num) {
+    if (num < 0) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
@@ -80,7 +88,13 @@ std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 double Sum(std::vector<double> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
-double Product(std::vector<double> nums);
+double Product(std::vector<double> nums) {
+    int product = 0;
+    for (int i = 0; i < nums.size(); i++ ) {
+        product = product * nums[i];
+    }
+    return product;
+}
 
 // Adds an double n to each element of a given vector
 std::vector<double> VectorPlusN(std::vector<double> v, double n);
