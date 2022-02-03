@@ -1,3 +1,5 @@
+#include <iostream>
+#include <vector>
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -10,7 +12,16 @@ std::string RemoveAllSubstrings(std::string s1, std::string s2);
 std::string RemoveFirstSubstring(std::string s1, std::string s2);
 
 // Joins all strings in a vector together, using the glue string in between them
-std::string Join(std::vector<std::string> pieces, std::string glue);
+std::string Join(std::vector<std::string> pieces, std::string glue) {
+    string output = "";
+    for (int x = 0; x < pieces.size(); x++) {
+        output += pieces[x];
+        if (x < pieces.size() -1) {
+            output += glue;
+        }
+    }
+    return output;
+}
 
 // takes two vectors of integers, a and b. The function then removes elements from a if they are also in b.
 // If the integer is in b, but not in a, nothing happens.
@@ -18,7 +29,13 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
 
 // divides an input integer by 2 until it is impossible to do so, then returns the final number.
 // (16 = 2 * 2 * 2 * 2 * 1 -> 1, 7 -> 7, 26 = 2 * 13 -> 13, 52 = 2 * 2 * 13 -> 13)
-int RemoveTwos(int original);
+int RemoveTwos(int original) {
+    int current = original;
+    while (current % 2 ==0) {
+        current = current /2;
+    }
+    return current;
+}
 
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
 std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
@@ -67,7 +84,13 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num);
+int Sign(int num) {
+    if (num < 0) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
@@ -92,7 +115,13 @@ std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 double Sum(std::vector<double> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
-double Product(std::vector<double> nums);
+double Product(std::vector<double> nums) {
+    int product = 0;
+    for (int i = 0; i < nums.size(); i++ ) {
+        product = product * nums[i];
+    }
+    return product;
+}
 
 // Adds an double n to each element of a given vector
 std::vector<double> VectorPlusN(std::vector<double> v, double n);
