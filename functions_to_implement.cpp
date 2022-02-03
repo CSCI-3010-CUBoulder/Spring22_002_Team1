@@ -24,13 +24,25 @@ int RemoveTwos(int original);
 std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
 
 // returns a vector with true for even numbers and false for odd numbers
-std::vector<bool> EvenMask(std::vector<int>);
+std::vector<bool> EvenMask(std::vector<int> V) {
+    std::vector<bool> ret;
+    for(int n=0; n<V.size(); n++) {
+        ret.push_back(V[n]%2==0);
+    }
+    return ret;
+}
 
 // returns a vector with true for odd numbers and false for even numbers
 std::vector<bool> OddMask(std::vector<int>);
 
 // Sums all numbers in a vector and returns the resulting value
-int Sum(std::vector<int> nums);
+int Sum(std::vector<int> nums) {
+    int ret;
+    for(int n=0; n<V.size(); n++) {
+        ret += nums[n];
+    }
+    return ret;
+}
 
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums);
