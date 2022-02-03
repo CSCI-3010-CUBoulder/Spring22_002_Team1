@@ -50,7 +50,13 @@ std::vector<bool> OddMask(std::vector<int>);
 int Sum(std::vector<int> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
-int Product(std::vector<int> nums);
+int Product(std::vector<int> nums) {
+  int start = 1;
+  for(int i = 0; i < nums.size(); i++) {
+    start = start * nums[i];
+  }
+  return nums;
+}
 
 // Adds an integer n to each element of a given vector
 std::vector<int> VectorPlusN(std::vector<int> v, int n);
@@ -69,7 +75,13 @@ std::vector<int> SquaresUntil(int n);
 int NthFibonacci(int n);
 
 // takes an int, n, and returns the factorial of that int (n!)
-int Factorial(int n);
+int Factorial(int n) {
+  int start = 1
+  for(int i = 1; i <= n; i++ ) {
+    start = start * i;
+  }
+  return start;
+}
 
 // returns -1 if the number is negative and 1 if positive
 int Sign(int num) {
