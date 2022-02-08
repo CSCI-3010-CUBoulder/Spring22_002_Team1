@@ -22,3 +22,14 @@ TEST_CASE("Sum of vector", "[sum]"){
 		REQUIRE( v == unchanged );
 	}
 }
+
+
+TEST_CASE ( "Join vectors", "[join]") {
+	std::vector<std::string> test{"This", "Is", "A", "Test"};
+
+  	REQUIRE( Join(test, " ") == "This Is A Test" );
+}
+
+TEST_CASE("Sum of vector", "[sum]"){
+	REQUIRE( RemoveTwos(16) == 1 );
+}
