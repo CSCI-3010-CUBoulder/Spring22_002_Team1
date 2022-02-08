@@ -15,9 +15,10 @@ TEST_CASE("Sum of vector", "[sum]"){
 
 	SECTION("checking with {1,2,3,5,6,7,8,10}"){
 		std::vector<int> v{1,2,3,5,6,7,8,10};
+		std::vector<int> unchanged{1,2,3,5,6,7,8,10};
 		int testv1 = Sum(v);
 
 		REQUIRE(testv1 == 42);
-		REQUIRE( v == {1,2,3,5,6,7,8,10} );
+		REQUIRE( v == unchanged );
 	}
 }
