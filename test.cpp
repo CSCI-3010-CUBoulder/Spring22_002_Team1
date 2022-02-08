@@ -30,6 +30,6 @@ TEST_CASE ( "Join vectors", "[join]") {
   	REQUIRE( Join(test, " ") == "This Is A Test" );
 }
 
-TEST_CASE("Sum of vector", "[sum]"){
+TEST_CASE("RemoveTwos", "[RemoveTwos]"){
 	REQUIRE( RemoveTwos(16) == 1 );
 }
