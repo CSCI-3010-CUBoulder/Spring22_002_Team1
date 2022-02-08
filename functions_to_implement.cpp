@@ -3,6 +3,8 @@
 #include "catch.hpp"
 /* String functions section */
 
+
+
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
 
@@ -51,7 +53,7 @@ std::vector<bool> EvenMask(std::vector<int> V) {
 }
 
 // returns a vector with true for odd numbers and false for even numbers
-std::vector<bool> OddMask(std::vector<int>);
+std::vector<bool> OddMask(std::vector<int> V);
 
 // Sums all numbers in a vector and returns the resulting value
 int Sum(std::vector<int> nums) {
