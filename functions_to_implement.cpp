@@ -13,7 +13,7 @@ std::string RemoveFirstSubstring(std::string s1, std::string s2);
 
 // Joins all strings in a vector together, using the glue string in between them
 std::string Join(std::vector<std::string> pieces, std::string glue) {
-    string output = "";
+    std::string output = "";
     for (int x = 0; x < pieces.size(); x++) {
         output += pieces[x];
         if (x < pieces.size() -1) {
@@ -55,7 +55,7 @@ std::vector<bool> OddMask(std::vector<int>);
 // Sums all numbers in a vector and returns the resulting value
 int Sum(std::vector<int> nums) {
     int ret;
-    for(int n=0; n<V.size(); n++) {
+    for(int n=0; n<nums.size(); n++) {
         ret += nums[n];
     }
     return ret;
@@ -67,7 +67,7 @@ int Product(std::vector<int> nums) {
   for(int i = 0; i < nums.size(); i++) {
     start = start * nums[i];
   }
-  return nums;
+  return start;
 }
 
 // Adds an integer n to each element of a given vector
@@ -88,7 +88,7 @@ int NthFibonacci(int n);
 
 // takes an int, n, and returns the factorial of that int (n!)
 int Factorial(int n) {
-  int start = 1
+  int start = 1;
   for(int i = 1; i <= n; i++ ) {
     start = start * i;
   }
