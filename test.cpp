@@ -4,11 +4,11 @@
 #include <vector>
 
 TEST_CASE ( "Sign of int", "[sign]") {
-  REQUIRE( Sign(0) == true );
-  REQUIRE( Sign(1) == true );
-  REQUIRE( Sign(-10) == false );
-  REQUIRE( Sign(-1000000) == false );
-  REQUIRE( Sign(100000) == true );
+  REQUIRE( Sign(0) == 1 );
+  REQUIRE( Sign(1) == 1 );
+  REQUIRE( Sign(-10) == -1 );
+  REQUIRE( Sign(-1000000) == -1 );
+  REQUIRE( Sign(100000) == 1 );
 }
 
 TEST_CASE("Sum of vector", "[sum]"){
