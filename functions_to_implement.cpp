@@ -121,10 +121,24 @@ std::vector<bool> LessMask(std::vector<double> nums, double less_than);
 std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than);
 
 // returns a vector with true for numbers less than the second parameters and false for those greater than or equal to
-std::vector<bool> LessMask(std::vector<int> nums, int less_than);
+std::vector<bool> LessMask(std::vector<int> nums, int less_than) {
+	std::vector<bool> output;
+	for (int i = 0; i < nums.size(); i++ ) {
+        if(nums[i] < less_than) {
+        	output.push_back(nums[i]);
+        }
+    }
+    return output;
+}
 
 // Sums all numbers in a vector and returns the resulting value
-double Sum(std::vector<double> nums);
+double Sum(std::vector<double> nums) {
+	int sum = 0;
+	for (int i = 0; i < nums.size(); i++ ) {
+        sum = sum + nums[i];
+    }
+    return sum;
+}
 
 // Multiplies all numbers in a vector together and returns the resulting value
 double Product(std::vector<double> nums) {
