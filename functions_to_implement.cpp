@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "catch.hpp"
 /* String functions section */
 
 
@@ -16,7 +17,7 @@ std::string RemoveFirstSubstring(std::string s1, std::string s2);
 // Joins all strings in a vector together, using the glue string in between them
 std::string Join(std::vector<std::string> pieces, std::string glue) {
     std::string output = "";
-    for (int x = 0; x < pieces.size(); x++) {
+    for(size_t x = 0; x < pieces.size(); x++) {
         output += pieces[x];
         if (x < pieces.size() -1) {
             output += glue;
@@ -45,7 +46,7 @@ std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
 // returns a vector with true for even numbers and false for odd numbers
 std::vector<bool> EvenMask(std::vector<int> V) {
     std::vector<bool> ret;
-    for(int n=0; n<V.size(); n++) {
+    for(size_t n=0; n<V.size(); n++) {
         ret.push_back(V[n]%2==0);
     }
     return ret;
@@ -57,7 +58,7 @@ std::vector<bool> OddMask(std::vector<int> V);
 // Sums all numbers in a vector and returns the resulting value
 int Sum(std::vector<int> nums) {
     int ret = 0;
-    for(int n=0; n<nums.size(); n++) {
+    for(size_t n=0; n<nums.size(); n++) {
         ret += nums[n];
     }
     return ret;
@@ -66,7 +67,7 @@ int Sum(std::vector<int> nums) {
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums) {
   int start = 1;
-  for(int i = 0; i < nums.size(); i++) {
+  for(size_t i = 0; i < nums.size(); i++) {
     start = start * nums[i];
   }
   return start;
@@ -130,8 +131,8 @@ double Sum(std::vector<double> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
 double Product(std::vector<double> nums) {
-    int product = 1;
-    for (int i = 0; i < nums.size(); i++ ) {
+    int product = 0;
+    for(size_t i = 0; i < nums.size(); i++ ) {
         product = product * nums[i];
     }
     return product;
