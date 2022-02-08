@@ -11,15 +11,13 @@ TEST_CASE ( "Sign of int", "[sign]") {
   REQUIRE( Sign(100000) == 1 );
 }
 
-TEST_CASE("Sum of vector", "[sum]"){
+TEST_CASE("Product of vector", "[product]"){
 
-	SECTION("checking with {1,2,3,5,6,7,8,10}"){
-		std::vector<int> v{1,2,3,5,6,7,8,10};
-		std::vector<int> unchanged{1,2,3,5,6,7,8,10};
-		int testv1 = Sum(v);
+	SECTION("checking with {1,2,3,4,5,6,7,8}"){
+		std::vector<double> v{1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0};
+		double testv1 = Product(v);
 
-		REQUIRE(testv1 == 42);
-		REQUIRE( v == unchanged );
+		REQUIRE(testv1 == 40320.0);
 	}
 }
 
