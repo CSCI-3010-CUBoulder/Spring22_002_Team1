@@ -7,8 +7,10 @@ all: test
 # note that lines below targets must be
 # TABBED in (not spaces!)
 clean:
-	rm test
+	rm *.o test
 
-test: functions_to_implement.cpp
-	$(CXX) $(CXXFLAGS) functions_to_implement.cpp -o test
+test: functions_to_implement.o test.cpp
+	$(CXX) $(CXXFLAGS) test.cpp functions_to_implement.o -o test
 
+functions_to_implement.o: test.cpp
+	$(CXX) $(CXXFLAGS) -c test.cpp
